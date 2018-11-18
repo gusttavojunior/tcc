@@ -29,6 +29,13 @@
 				}
 			}
 			}
+  var count = 0;
+      function controle(obj){
+       count++;
+        if(count > 1){
+          document.getElementById('case').value = 4;
+        }
+      }
 		</script>
     </head>
 
@@ -133,36 +140,37 @@
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input validate" type="checkbox" value="0" id="defaultCheck1" name="miopia">
+                <input class="form-check-input validate" type="checkbox" onclick="controle(this);" value="0" id="defaultCheck1" name="miopia">
                 <label class="form-check-label" for="defaultCheck1">
                   Miopia
                 </label>
               </div>
 
               <div class="form-check">
-                <input class="form-check-input validate" type="checkbox" value="3" id="defaultCheck2" name="daltonismo">
+                <input class="form-check-input validate" type="checkbox" onclick="controle(this);" value="3" id="defaultCheck2" name="daltonismo">
                 <label class="form-check-label" for="defaultCheck2">
                   Daltonismo
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input validate" type="checkbox" value="2" id="defaultCheck1" name="astigmatismo">
+                <input class="form-check-input validate" type="checkbox" onclick="controle(this);" value="2" id="defaultCheck1" name="astigmatismo">
                 <label class="form-check-label" for="defaultCheck1">
                   Astigmatismo
                 </label>
               </div>
                <div class="form-check">
-                <input class="form-check-input validate" type="checkbox" value="2" id="defaultCheck1" name="hipermetropia">
+                <input class="form-check-input validate" type="checkbox" onclick="controle(this);" value="2" id="defaultCheck1" name="hipermetropia">
                 <label class="form-check-label" for="defaultCheck1">
                   Hipermetropia
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input validate" type="checkbox" value="2" id="defaultCheck1" name="outros">
+                <input class="form-check-input validate" type="checkbox" onclick="controle(this);" value="2" id="defaultCheck1" name="outros">
                 <label class="form-check-label" for="defaultCheck1">
                   Outros
                 </label>
               </div>
+              <input type="hidden" name="case" value="" id="case">
             </div>
           </div><br/>
 
@@ -192,7 +200,7 @@
     
              <div style="margin-top: 10px">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="3">
+                  <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios1" value="3">
                   <label class="form-check-label" for="exampleRadios1">
                      3 - 8 - 1 - 42 - 74 - 52
                   </label>

@@ -10,14 +10,14 @@
 	$user->setSenha($_POST['password']);
 	$user->setEmail($_POST['email']);
 	$resp = $login->logar($user);
-
-	if(count($resp) > 0){ 	
+	
+	if($resp){ 
+		session_destroy();
 		session_start();
 		$_SESSION['perfil'] = $resp[0]->perfil;
-		exit();
-		header('../index.php');
+		header("location: ../index.php?id=1");
 		}else{
-		echo "Não logado";
+		header("location: ../index.php?id=2");
 	}
 
 
